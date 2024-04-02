@@ -7,10 +7,11 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        dmserif: ["DM Serif", "serif"],
-        com: ["Comfortaa", "cursive"],
-        customFont: ["Poppins"],
+      colors: {
+        primary: "#010851",
+        secondary: "#9A7AF1",
+        tartiary: "#707070",
+        pink: "#EE9AE5",
       },
     },
   },
