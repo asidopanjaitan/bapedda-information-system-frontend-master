@@ -8,13 +8,15 @@ import TambahKuesioner from "./component/tambahkuesioner.jsx";
 function Kuesioner() {
   return (
     <>
-      <Nav />
-      <TableKuesioner />
+      <>
+        <Nav />
+        <TableKuesioner />
+      </>
     </>
   );
 }
 
-function TableKuesioner() {
+function TableKuesioner({ onLogout }) {
   const [kuesionerData, setKuesionerData] = useState([]);
 
   useEffect(() => {
@@ -27,6 +29,7 @@ function TableKuesioner() {
     <>
       <div className="relative overflow-auto ">
         <TambahKuesioner />
+        <button onClick={onLogout}>Logout</button>
       </div>
       <div className="relative overflow-x-auto mt-5">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

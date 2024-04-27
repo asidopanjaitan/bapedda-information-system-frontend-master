@@ -23,7 +23,8 @@ const Navbar = () => {
           <div className="flex space-x-14 items-center">
             <a
               href="/guest/dashboard"
-              className="text-2xl font-bold flex item-center space-x-3 space-y-2 text-primary">
+              className="text-2xl font-bold flex item-center space-x-3 space-y-2 text-primary"
+            >
               <img
                 className="h-[45px] inline-block items-center"
                 src={logo}
@@ -46,7 +47,7 @@ const Navbar = () => {
               Regulasi
             </a>
             <button className="bg-secondary py-2 px-6 transition-all duration-300 rounded hover:text-white hover:bg-indigo-700">
-              <a href="">Login</a>
+              <a href="/Login">Login</a>
             </button>
           </div>
 
@@ -54,7 +55,8 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white focus:outline-none  focus:text-gray-300">
+              className="text-white focus:outline-none  focus:text-gray-300"
+            >
               {isMenuOpen ? (
                 <FaXmark className="w-6 h-6 text-primary" />
               ) : (
@@ -68,12 +70,14 @@ const Navbar = () => {
       <div
         className={` space-y-4 px-4 pt-24 pb-5 bg-secondary text-xl ${
           isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"
-        }`}>
+        }`}
+      >
         {navItems.map(({ link, path }) => (
           <a
             key={link}
             href={path}
-            className="block text-white hover:text-gray-300">
+            className="block text-white hover:text-gray-300"
+          >
             {link}
           </a>
         ))}
